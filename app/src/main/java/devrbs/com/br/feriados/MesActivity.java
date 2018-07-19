@@ -9,7 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class Mes extends AppCompatActivity {
+public class MesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class Mes extends AppCompatActivity {
     btnMesVoltar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(Mes.this, MainActivity.class);
+            Intent intent = new Intent(MesActivity.this, MainActivity.class);
             startActivity(intent);
         }
     });

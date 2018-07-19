@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Estado:" + estado, Toast.LENGTH_SHORT).show();
 
                     //transicao de tela para a activity mes
-                    Intent intent = new Intent(MainActivity.this, Mes.class);
+                    Intent intent = new Intent(MainActivity.this, MesActivity.class);
                     startActivity(intent);
 
                 }
