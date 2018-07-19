@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mes">
+    tools:context=".MesActivity">
 
     <TextView
         android:id="@+id/text_mes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Escolha o mês de sua preferência:"/>
+        android:text="Escolha o mês de sua preferência:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
     <RadioGroup
         android:id="@+id/rdg_mes"
