@@ -61,7 +61,6 @@ public class ListaFeriadosActivity extends AppCompatActivity{
         public void onClick(View v) {
             Intent intent = new Intent(ListaFeriadosActivity.this, MainActivity.class);
             startActivity(intent);
-            finish();
         }
     });
 

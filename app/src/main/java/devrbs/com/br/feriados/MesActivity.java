@@ -44,7 +44,6 @@ public class MesActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Mes: " + mes, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MesActivity.this, ListaFeriadosActivity.class);
                 startActivity(intent);
-                finish();
 
 
             }
