@@ -13,13 +13,14 @@
         android:text="Os feriados deste mês são: "
         android:textColor="#000000"
         android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
 
     <ListView
 
         android:id="@+id/lista_feriados"
         android:layout_width="wrap_content"
-        android:layout_height="351dp"
+        android:layout_height="329dp"
         android:layout_marginTop="48dp" />
 
     <Button
@@ -28,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="70dp"
         android:text="VOLTAR" />
 
     <Button

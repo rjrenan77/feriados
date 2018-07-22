@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     //transicao de tela para a activity mes
                     Intent intent = new Intent(MainActivity.this, MesActivity.class);
                     startActivity(intent);
+                    finish();
 
                 }
             }

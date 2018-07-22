@@ -13,7 +13,8 @@
         android:text="Escolha o mês de sua preferência:"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
 
     <RadioGroup
         android:id="@+id/rdg_mes"
@@ -44,8 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="91dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="70dp"
         android:text="Avançar" />
 
     <Button
@@ -54,7 +54,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/btn_mes_avancar"
-        android:layout_marginStart="35dp"
         android:text="Voltar" />
 
 

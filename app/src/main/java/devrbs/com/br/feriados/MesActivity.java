@@ -44,17 +44,20 @@ public class MesActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Mes: " + mes, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MesActivity.this, ListaFeriadosActivity.class);
                 startActivity(intent);
+                finish();
+
+
             }
         }
     });
 
     //intent do botao voltar
-
-    btnMesVoltar.setOnClickListener(new View.OnClickListener() {
+  btnMesVoltar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(MesActivity.this, MainActivity.class);
             startActivity(intent);
+
         }
     });
 
