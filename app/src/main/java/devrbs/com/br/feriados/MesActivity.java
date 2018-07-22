@@ -16,49 +16,49 @@ public class MesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes);
 
-    //referenciando botoes para os objetos
-    final RadioGroup rdg_mes = findViewById(R.id.rdg_mes);
-    final RadioButton janeiro = findViewById(R.id.rdb_mes_jan);
-    final RadioButton fevereiro = findViewById(R.id.rdb_mes_fev);
-    final Button btnMesAvancar = findViewById(R.id.btn_mes_avancar);
-    Button btnMesVoltar = findViewById(R.id.btn_mes_voltar);
+        //referenciando botoes para os objetos
+        final RadioGroup rdg_mes = findViewById(R.id.rdg_mes);
+        final RadioButton janeiro = findViewById(R.id.rdb_mes_jan);
+        final RadioButton fevereiro = findViewById(R.id.rdb_mes_fev);
+        final Button btnMesAvancar = findViewById(R.id.btn_mes_avancar);
+        Button btnMesVoltar = findViewById(R.id.btn_mes_voltar);
 
-    //verificando se o botão avancar foi clicado
-    btnMesAvancar.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            //verifica se o radiobutton está clicado
-            if (rdg_mes.getCheckedRadioButtonId() == -1) {
+        //verificando se o botão avancar foi clicado
+        btnMesAvancar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //verifica se o radiobutton está clicado
+                if (rdg_mes.getCheckedRadioButtonId() == -1) {
 
-                Toast.makeText(getApplicationContext(),"Por favor escolha uma opção", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Por favor escolha uma opção", Toast.LENGTH_SHORT).show();
 
-            } else {
-                String mes = "";
-                if (janeiro.isChecked()) {
-                    mes = "Janeiro";
+                } else {
+                    String mes = "";
+                    if (janeiro.isChecked()) {
+                        mes = "Janeiro";
+
+                    }
+                    if (fevereiro.isChecked()) {
+                        mes = "Fevereiro";
+                    }
+                    Toast.makeText(getApplicationContext(), "Mes: " + mes, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MesActivity.this, ListaFeriadosActivity.class);
+                    startActivity(intent);
+
 
                 }
-                if (fevereiro.isChecked()) {
-                    mes = "Fevereiro";
-                }
-                Toast.makeText(getApplicationContext(), "Mes: " + mes, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MesActivity.this, ListaFeriadosActivity.class);
+            }
+        });
+
+        //intent do botao voltar
+        btnMesVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MesActivity.this, MainActivity.class);
                 startActivity(intent);
 
-
             }
-        }
-    });
-
-    //intent do botao voltar
-  btnMesVoltar.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(MesActivity.this, MainActivity.class);
-            startActivity(intent);
-
-        }
-    });
+        });
 
 
     }

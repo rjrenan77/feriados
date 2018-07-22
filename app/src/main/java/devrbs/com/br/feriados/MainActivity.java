@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO : criar botão voltar na barra de menu
     //TODO : Banco de dados para a lista de feriados (pesquisar)
+    //TODO : ver como muda a cor do titulo do app
 
 
     @Override
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        }
+    }
 
     //sobreescrevo o método que representa o botão voltar criando uma splash screen perguntando se
     //o usuario deseja sair da app
