@@ -13,8 +13,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //TODO : criar botão voltar na barra de menu
+    //DONE : criar botão voltar na barra de menu
+    //TODO : resolver bug do botao voltar e depois avançar
     //DONE : Banco de dados para a lista de feriados (pesquisar)
+    //TODO : ver como atualiza o esquema do banco de dados
     //TODO : ver como muda a cor do titulo do app
     //TODO: de repente fazer o preenchimento da listview com um string-array em um xml, para nao criar inserções em banco direto no código
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     String estado = "";
 
                     if (rdb_rj.isChecked()) {
-                        estado = "Rio de Janeiro";
+                        estado = "rj";
                     }
                     if (rdba_sp.isChecked()) {
                         estado = "São Paulo";
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //transicao de tela para a activity mes
                     Intent intent = new Intent(MainActivity.this, MesActivity.class);
+                    //enviando valor da variável estado para a proxima activity
+                    intent.putExtra("estado",estado);
                     startActivity(intent);
 
                 }

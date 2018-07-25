@@ -179,4 +179,21 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
 
     }
 
+    public ArrayList<Feriado> retornaFeriadosDoEstadoPeloMes(String tabela, String mes) {
+
+        ArrayList<Feriado> listaFeriados =  new ArrayList<Feriado>();
+        String query = "SELECT * FROM " + tabela + " WHERE mes = ?";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query,new String[] {mes});
+
+        if(cursor.moveToFirst()){
+            do {
+                Feriado feriado = setaFeriado(cursor);
+                listaFeriados.add(feriado);
+            }while (cursor.moveToNext());
+        }
+        return listaFeriados;
+
+    }
 }

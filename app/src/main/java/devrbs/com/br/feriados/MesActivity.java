@@ -3,6 +3,7 @@ package devrbs.com.br.feriados;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -37,14 +38,27 @@ public class MesActivity extends AppCompatActivity {
                 } else {
                     String mes = "";
                     if (janeiro.isChecked()) {
-                        mes = "Janeiro";
+                        mes = "jan";
 
                     }
                     if (fevereiro.isChecked()) {
                         mes = "Fevereiro";
                     }
+
+                    //recebendo valor do radio button do MainActivity
+                    Intent valorEstadoRadioButtonMainActivity = getIntent();
+                    String estado = valorEstadoRadioButtonMainActivity.getExtras().getString("estado");
+                    Log.i("ESTADO-------->", estado);
+
                     Toast.makeText(getApplicationContext(), "Mes: " + mes, Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(MesActivity.this, ListaFeriadosActivity.class);
+
+                    //enviado valores mes e estado desta intent para a próxima
+                    intent.putExtra("mes",mes);
+                    intent.putExtra("estado",estado);
+
+
                     startActivity(intent);
 
 

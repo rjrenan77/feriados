@@ -9,15 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import devrbs.com.br.feriados.adapter.FeriadoAdapter;
 import devrbs.com.br.feriados.dao.BDSQLiteHelper;
 
-public class ListaFeriadosActivity extends AppCompatActivity{
+public class ListaFeriadosActivity extends AppCompatActivity {
 
     private BDSQLiteHelper bd;
     ArrayList<Feriado> listaFeriados;
@@ -27,12 +25,14 @@ public class ListaFeriadosActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         //associa a activity ao layout
         setContentView(R.layout.activity_lista_feriados);
+
+
+        //instancia banco de dados
         bd = new BDSQLiteHelper(this);
 
 
         //pegando referencia dos botoes
         Button btnInicio = findViewById(R.id.btn_lista_feriados_inicio);
-
 
 
         //tratando evento de click no botao
@@ -45,7 +45,6 @@ public class ListaFeriadosActivity extends AppCompatActivity{
         });
 
 
-
         //ativando botao voltar na actionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //mostra o botao voltar
         getSupportActionBar().setHomeButtonEnabled(true); //ativa o botao
@@ -56,12 +55,23 @@ public class ListaFeriadosActivity extends AppCompatActivity{
     protected void onStart() {
         super.onStart();
         ListView lista = (ListView) findViewById(R.id.lista_feriados);
-        listaFeriados = bd.retornaTodosFeriadosRJ();
+
+        //recebe os valores da intents da MainActivity e MesActivity
+        Intent mainIntent = getIntent();
+        String estado = mainIntent.getExtras().getString("estado");
+        String mes = mainIntent.getExtras().getString("mes");
+
+        Log.i("estado---------------->", estado);
+        Log.i("mes--------------->", mes);
+
+        //retornando feriados do estado de acordo com o mes escolhido
+        listaFeriados = bd.retornaFeriadosDoEstadoPeloMes(estado, mes);
+        //listaFeriados = bd.retornaTodosFeriadosRJ();
         Log.i("-------->>", "onStart: " + listaFeriados);
 
 
         FeriadoAdapter adapter = new FeriadoAdapter(this, listaFeriados);
-        if(lista != null)
+        if (lista != null)
             lista.setAdapter(adapter);
 
 
@@ -70,12 +80,13 @@ public class ListaFeriadosActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 startActivity(new Intent(this, MesActivity.class));
                 finishAffinity();
                 break;
-            default:break;
+            default:
+                break;
         }
         return true;
     }
