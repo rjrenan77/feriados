@@ -13,7 +13,7 @@ import devrbs.com.br.feriados.Feriado;
 
 public class BDSQLiteHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "FeriadosDB";
     private static final String TABELA_RJ = "rj";
     private static final String ID = "id";
@@ -26,6 +26,23 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
 
     private static final String[] COLUNAS = {ID, DIA,DATA,MES,ANO,FERIADO,FLAG};
 
+    private static final String CREATE_TABLE = "CREATE TABLE rj (" +
+            "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "dia TEXT," +
+            "data INTEGER, "+
+            "mes TEXT, " +
+            "ano INTEGER," +
+            "feriado TEXT," +
+            "flag INTEGER)";
+
+    private static final String CREATE_TABLE_SP = "CREATE TABLE sp (" +
+            "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "dia TEXT," +
+            "data INTEGER," +
+            "mes TEXT," +
+            "ano INTEGER," +
+            "feriado TEXT," +
+            "flag INTEGER)";
 
     //construtor que recebe o contexto, o nome do banco e a versao
     public BDSQLiteHelper(Context context) {
@@ -35,24 +52,15 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     //o que vou fazer quando crio o banco
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        String CREATE_TABLE = "CREATE TABLE rj (" +
-                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "dia TEXT," +
-                "data INTEGER, "+
-                "mes TEXT, " +
-                "ano INTEGER," +
-                "feriado TEXT," +
-                "flag INTEGER)";
-
         db.execSQL(CREATE_TABLE);
     }
 
     //o que vou fazer para atualizar o banco
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS rj");
-        this.onCreate(db);
+        if(oldVersion < 2){
+            db.execSQL(CREATE_TABLE_SP);
+        }
     }
 
 
