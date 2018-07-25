@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         estado = "rj";
                     }
                     if (rdba_sp.isChecked()) {
-                        estado = "spgit ";
+                        estado = "sp";
                     }
 
                     Toast.makeText(getApplicationContext(), "Estado:" + estado, Toast.LENGTH_SHORT).show();
