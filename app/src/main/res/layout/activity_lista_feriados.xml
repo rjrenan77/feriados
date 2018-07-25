@@ -24,21 +24,22 @@
         android:layout_height="329dp"
         android:layout_marginTop="48dp" />
 
-    <Button
+    <!--<Button
         android:id="@+id/btn_lista_feriados_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="70dp"
-        android:text="VOLTAR" />
+        android:text="VOLTAR" />-->
 
     <Button
         android:id="@+id/btn_lista_feriados_inicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/btn_lista_feriados_voltar"
+        android:layout_marginBottom="70dp"
         android:text="Voltar ao Início" />
 
 

@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -27,6 +28,28 @@ public class ListaFeriadosActivity extends AppCompatActivity{
         //associa a activity ao layout
         setContentView(R.layout.activity_lista_feriados);
         bd = new BDSQLiteHelper(this);
+
+
+        //pegando referencia dos botoes
+        Button btnInicio = findViewById(R.id.btn_lista_feriados_inicio);
+
+
+
+        //tratando evento de click no botao
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        //ativando botao voltar na actionBar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //mostra o botao voltar
+        getSupportActionBar().setHomeButtonEnabled(true); //ativa o botao
+
     }
 
     @Override
@@ -42,5 +65,18 @@ public class ListaFeriadosActivity extends AppCompatActivity{
             lista.setAdapter(adapter);
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case android.R.id.home:
+                startActivity(new Intent(this, MesActivity.class));
+                finishAffinity();
+                break;
+            default:break;
+        }
+        return true;
     }
 }

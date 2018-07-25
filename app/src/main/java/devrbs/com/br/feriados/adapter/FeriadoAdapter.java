@@ -64,11 +64,11 @@ public class FeriadoAdapter extends BaseAdapter{
         Feriado feriado = elementosFeriado.get(position);
 
         //pegando as referencias das views
-        TextView txtData = view.findViewById(R.id.txt_view_data);
+        TextView txtDataCompleta = view.findViewById(R.id.txt_view_data);
         TextView txtFeriado = view.findViewById(R.id.txt_view_feriado);
 
         //populando essas referencias
-        txtData.setText(String.valueOf(feriado.getData()));
+        txtDataCompleta.setText(String.valueOf(feriado.getData()+ "/" + feriado.getMes()) + "/" + feriado.getAno());
         txtFeriado.setText(feriado.getFeriado());
 
 

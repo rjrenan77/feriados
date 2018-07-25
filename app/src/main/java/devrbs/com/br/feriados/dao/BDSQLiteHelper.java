@@ -2,7 +2,6 @@ package devrbs.com.br.feriados.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -104,14 +103,14 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
            return null;
        }else {
            cursor.moveToFirst();
-           Feriado feriado = cursorToFeriado(cursor);
+           Feriado feriado = setaFeriado(cursor);
            return feriado;
        }
 
     }
 
-    //retorna os dados do feriado
-    private Feriado cursorToFeriado(Cursor cursor) {
+    //seta os dados do feriado
+    private Feriado setaFeriado(Cursor cursor) {
 
         Feriado feriado = new Feriado();
         feriado.setId(Integer.parseInt(cursor.getString(0)));
@@ -137,7 +136,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()){
             do {
-                Feriado feriado = cursorToFeriado(cursor);
+                Feriado feriado = setaFeriado(cursor);
                 listaFeriados.add(feriado);
             }while (cursor.moveToNext());
         }
