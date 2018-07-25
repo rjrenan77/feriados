@@ -24,6 +24,8 @@ public class ListaFeriadosActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //associa a activity ao layout
+        setContentView(R.layout.activity_lista_feriados);
         bd = new BDSQLiteHelper(this);
     }
 
@@ -32,9 +34,12 @@ public class ListaFeriadosActivity extends AppCompatActivity{
         super.onStart();
         ListView lista = (ListView) findViewById(R.id.lista_feriados);
         listaFeriados = bd.retornaTodosFeriadosRJ();
-        Log.i("-------->>", "onStart: " + listaFeriados.get(0).toString());
+        Log.i("-------->>", "onStart: " + listaFeriados);
+
+
         FeriadoAdapter adapter = new FeriadoAdapter(this, listaFeriados);
-        lista.setAdapter(adapter);
+        if(lista != null)
+            lista.setAdapter(adapter);
 
 
     }

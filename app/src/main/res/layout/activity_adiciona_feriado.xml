@@ -13,8 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="60dp"
         android:ems="10"
+        android:hint="dia"
         android:inputType="textPersonName"
-        android:text="dia"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="21dp" />
 
@@ -25,8 +25,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="124dp"
         android:ems="10"
+        android:hint="data"
         android:inputType="textPersonName"
-        android:text="data"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="88dp" />
 
@@ -37,8 +37,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="188dp"
         android:ems="10"
+        android:hint="mes"
         android:inputType="textPersonName"
-        android:text="mes"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="152dp" />
 
@@ -51,8 +51,8 @@
         android:layout_marginBottom="214dp"
         android:layout_marginStart="16dp"
         android:ems="10"
+        android:hint="ano"
         android:inputType="textPersonName"
-        android:text="ano"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="217dp" />
 
@@ -65,8 +65,8 @@
         android:layout_marginBottom="140dp"
         android:layout_marginStart="23dp"
         android:ems="10"
+        android:hint="feriado"
         android:inputType="textPersonName"
-        android:text="feriado"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="282dp" />
 

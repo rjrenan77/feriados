@@ -20,10 +20,10 @@
 
         <activity android:name=".MesActivity" />
         <activity android:name=".ListaFeriadosActivity" />
-        <activity android:name=".AdicionaFeriadoActivity" />-->
+        <activity android:name=".AdicionaFeriadoActivity" />-
 
 
-       <!-- <activity android:name=".AdicionaFeriadoActivity">
+        <!--<activity android:name=".AdicionaFeriadoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
