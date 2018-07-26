@@ -82,12 +82,9 @@ public class ListaFeriadosActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                startActivity(new Intent(this, MesActivity.class));
-                finishAffinity();
-                break;
-            default:
-                break;
+                //só assim não esquece a referencia do estado!! kkk
+                finish();
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 }
