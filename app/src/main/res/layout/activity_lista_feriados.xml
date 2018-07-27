@@ -40,7 +40,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="70dp"
-        android:text="Voltar ao Início" />
+        android:text="Voltar ao Início"
+        android:background="@drawable/selector_button"/>
 
 
 </RelativeLayout>

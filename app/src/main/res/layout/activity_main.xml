@@ -51,7 +51,8 @@
         android:text="Avançar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="419dp" />
+        tools:layout_editor_absoluteY="419dp"
+        android:background="@drawable/selector_button"/>
 
 
 </RelativeLayout>

@@ -26,7 +26,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
 
     private static final String[] COLUNAS = {ID, DIA,DATA,MES,ANO,FERIADO,FLAG};
 
-    private static final String CREATE_TABLE = "CREATE TABLE rj (" +
+    private static final String CREATE_TABLE_RJ = "CREATE TABLE rj (" +
             "id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "dia TEXT," +
             "data INTEGER, "+
@@ -52,7 +52,8 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     //o que vou fazer quando crio o banco
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_TABLE);
+        db.execSQL(CREATE_TABLE_RJ);
+        db.execSQL(CREATE_TABLE_SP);
     }
 
     //o que vou fazer para atualizar o banco

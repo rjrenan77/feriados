@@ -14,9 +14,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //DONE : criar botão voltar na barra de menu
-    //TODO : resolver bug do botao voltar e depois avançar
+    //DONE : resolver bug do botao voltar e depois avançar
     //DONE : Banco de dados para a lista de feriados (pesquisar)
-    //TODO : ver como atualiza o esquema do banco de dados
+    //DONE : ver como atualiza o esquema do banco de dados
     //TODO : ver como muda a cor do titulo do app
     //TODO: de repente fazer o preenchimento da listview com um string-array em um xml, para nao criar inserções em banco direto no código
 
