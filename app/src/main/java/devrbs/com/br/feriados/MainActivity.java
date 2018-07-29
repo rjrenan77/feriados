@@ -17,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
     //DONE : resolver bug do botao voltar e depois avançar
     //DONE : Banco de dados para a lista de feriados (pesquisar)
     //DONE : ver como atualiza o esquema do banco de dados
+    //TODO: Preencher feriados no banco
     //TODO : ver como muda a cor do titulo do app
     //TODO: de repente fazer o preenchimento da listview com um string-array em um xml, para nao criar inserções em banco direto no código
-
+    //TODO: colocar propaganda
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
