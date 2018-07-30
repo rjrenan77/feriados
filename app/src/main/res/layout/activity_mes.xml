@@ -20,7 +20,7 @@
     <RadioGroup
         android:id="@+id/rdg_mes"
         android:layout_width="336dp"
-        android:layout_height="146dp"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="61dp" >
@@ -38,6 +38,70 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Fevereiro" />
+
+
+        <RadioButton
+            android:id="@+id/rdb_mes_mar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Março" />
+
+        <RadioButton
+            android:id="@+id/rdb_mes_abr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Abril" />
+        <RadioButton
+            android:id="@+id/rdb_mes_mai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Maio" />
+        <RadioButton
+            android:id="@+id/rdb_mes_jun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Junho" />
+        <RadioButton
+            android:id="@+id/rdb_mes_jul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Julho" />
+        <RadioButton
+            android:id="@+id/rdb_mes_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Agosto" />
+        <RadioButton
+            android:id="@+id/rdb_mes_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Setembro" />
+        <RadioButton
+            android:id="@+id/rdb_mes_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Outubro" />
+        <RadioButton
+            android:id="@+id/rdb_mes_nov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Novembro" />
+        <RadioButton
+            android:id="@+id/rdb_mes_dez"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dezembro" />
+
     </RadioGroup>
 
     <Button

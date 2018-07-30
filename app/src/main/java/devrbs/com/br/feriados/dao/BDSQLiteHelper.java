@@ -44,6 +44,135 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
             "feriado TEXT," +
             "flag INTEGER)";
 
+    //**************RIO DE JANEIRO**************//
+
+    //insert dos feriados de janeiro do RJ
+    private static final String INSERT_FERIADOS_JANEIRO_RJ = "INSERT INTO rj (" +
+            "dia, data, mes, ano, feriado, flag) " +
+            "VALUES ('Segunda-Feira', 01, 'Janeiro', 2018, 'Confraternização Universal (Ano Novo)', 1 )," +
+            "('Sábado',20,'Janeiro',2018,'Dia de São Sebastião',1);";
+
+    //insert dos feriados de fevereiro do RJ
+    private static final String INSERT_FERIADOS_FEVEREIRO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Terça-Feira', 13, 'Fevereiro', 2018, 'Carnaval', 1);";
+
+    //insert dos feriados de marco do RJ
+    private static final String INSERT_FERIADOS_MARCO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 30, 'Março', 2018, 'Sexta-Feira Santa', 1);";
+
+    //insert dos feriados de abril do RJ
+    private static final String INSERT_FERIADOS_ABRIL_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sábado', 21, 'Abril', 2018, 'Dia de Tiradentes', 1)," +
+            "('Segunda-Feira', 23 , 'Abril', 2018, 'Dia de São Jorge', 1);";
+
+    //insert dos feriados de maio do RJ
+    private static final String INSERT_FERIADOS_MAIO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Terça-Feira', 01, 'Maio', 2018, 'Dia do Trabalho', 1)," +
+            "('Quinta-Feira', 31 , 'Maio', 2018, 'Corpus Christi', 1);";
+
+    //insert dos feriados de setembro do RJ
+    private static final String INSERT_FERIADOS_SETEMBRO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 7, 'Setembro', 2018, 'Independência do Brasil', 1);";
+
+    //insert dos feriados de outubro do RJ
+    private static final String INSERT_FERIADOS_OUTUBRO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 12, 'Outubro', 2018, 'Nossa Senhora de Aparecida', 1)," +
+            "('Segunda-Feira', 15 , 'Outubro', 2018, 'Dia dos Professores', 1)," +
+            "('Quarta-feira', 17, 'Outubro',2018,'Dia do Comércio', 1)," +
+            "('Domingo',28,'Outubro',2018,'Dia do Servidor Público', 1);";
+
+    //insert dos feriados de novembro do RJ
+    private static final String INSERT_FERIADOS_NOVEMBRO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 02, 'Novembro', 2018, 'Dia de Finados', 1)," +
+            "('Quinta-Feira', 15 , 'Novembro', 2018, 'Proclamação da República', 1)," +
+            "('Terça-Feira', 20 , 'Novembro', 2018, 'Dia da Consciência Negra', 1);";
+
+
+    //insert dos feriados de setembro do RJ
+    private static final String INSERT_FERIADOS_DEZEMBRO_RJ = "INSERT INTO rj ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Terça-Feira', 25, 'Dezembro', 2018, 'Natal', 1);";
+
+
+
+
+
+    //************SÃO PAULO *******//
+    //insert dos feriados de janeiro do SP
+    private static final String INSERT_FERIADOS_JANEIRO_SP = "INSERT INTO sp (" +
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Segunda-Feira', 01, 'Janeiro', 2018, 'Confraternização Universal (Ano Novo)', 1 )," +
+            "('Quinta-Feira',25,'Janeiro',2018,'Aniversário da Cidade de São Paulo', 1);";
+
+
+    //insert dos feriados de fevereiro do SP
+    private static final String INSERT_FERIADOS_FEVEREIRO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Terça-Feira', 13, 'Fevereiro', 2018, 'Carnaval', 1);";
+
+
+    //insert dos feriados de marco do sp
+    private static final String INSERT_FERIADOS_MARCO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 30, 'Março', 2018, 'Sexta-Feira Santa', 1);";
+
+    //insert dos feriados de abril do SP
+    private static final String INSERT_FERIADOS_ABRIL_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sábado', 21, 'Abril', 2018, 'Dia de Tiradentes', 1);";
+
+    //insert dos feriados de maio do SP
+    private static final String INSERT_FERIADOS_MAIO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Terça-Feira', 01, 'Maio', 2018, 'Dia do Trabalho', 1)," +
+            "('Quinta-Feira', 31 , 'Maio', 2018, 'Corpus Christi', 1);";
+
+
+    //insert dos feriados de abril do SP
+    private static final String INSERT_FERIADOS_JULHO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Segunda-feira', 09, 'Julho', 2018, 'Revolução Constitucionalista', 1);";
+
+
+    //insert dos feriados de setembro do SP
+    private static final String INSERT_FERIADOS_SETEMBRO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 7, 'Setembro', 2018, 'Independência do Brasil', 1);";
+
+
+
+    //insert dos feriados de outubro do SP
+    private static final String INSERT_FERIADOS_OUTUBRO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 12, 'Outubro', 2018, 'Nossa Senhora de Aparecida', 1)," +
+            "('Segunda-Feira', 15 , 'Outubro', 2018, 'Dia dos Professores', 1)," +
+            "('Quarta-feira', 17, 'Outubro',2018,'Dia do Comércio', 1)," +
+            "('Domingo',28,'Outubro',2018,'Dia do Servidor Público', 1);";
+
+
+    //insert dos feriados de novembro do SP
+    private static final String INSERT_FERIADOS_NOVEMBRO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Sexta-Feira', 02, 'Novembro', 2018, 'Dia de Finados', 1)," +
+            "('Quinta-Feira', 15 , 'Novembro', 2018, 'Proclamação da República', 1)," +
+            "('Terça-Feira', 20 , 'Novembro', 2018, 'Dia da Consciência Negra', 1);";
+
+
+    //insert dos feriados de setembro do SP
+    private static final String INSERT_FERIADOS_DEZEMBRO_SP = "INSERT INTO sp ("+
+            "dia, data, mes, ano, feriado, flag)" +
+            "VALUES ('Terça-Feira', 25, 'Dezembro', 2018, 'Natal', 1);";
+
+
+
+
     //construtor que recebe o contexto, o nome do banco e a versao
     public BDSQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -54,14 +183,33 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_RJ);
         db.execSQL(CREATE_TABLE_SP);
+        db.execSQL(INSERT_FERIADOS_JANEIRO_RJ);
+        db.execSQL(INSERT_FERIADOS_FEVEREIRO_RJ);
+        db.execSQL(INSERT_FERIADOS_MARCO_RJ);
+        db.execSQL(INSERT_FERIADOS_ABRIL_RJ);
+        db.execSQL(INSERT_FERIADOS_MAIO_RJ);
+        db.execSQL(INSERT_FERIADOS_SETEMBRO_RJ);
+        db.execSQL(INSERT_FERIADOS_OUTUBRO_RJ);
+        db.execSQL(INSERT_FERIADOS_NOVEMBRO_RJ);
+        db.execSQL(INSERT_FERIADOS_DEZEMBRO_RJ);
+
+        db.execSQL(INSERT_FERIADOS_JANEIRO_SP);
+        db.execSQL(INSERT_FERIADOS_FEVEREIRO_SP);
+        db.execSQL(INSERT_FERIADOS_MARCO_SP);
+        db.execSQL(INSERT_FERIADOS_ABRIL_SP);
+        db.execSQL(INSERT_FERIADOS_MAIO_SP);
+        db.execSQL(INSERT_FERIADOS_JULHO_SP);
+        db.execSQL(INSERT_FERIADOS_SETEMBRO_SP);
+        db.execSQL(INSERT_FERIADOS_OUTUBRO_SP);
+        db.execSQL(INSERT_FERIADOS_NOVEMBRO_SP);
+        db.execSQL(INSERT_FERIADOS_DEZEMBRO_SP);
     }
+
 
     //o que vou fazer para atualizar o banco
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if(oldVersion < 2){
-            db.execSQL(CREATE_TABLE_SP);
-        }
+        
     }
 
 
