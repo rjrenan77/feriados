@@ -17,8 +17,10 @@ public class MainActivity extends AppCompatActivity {
     //DONE : resolver bug do botao voltar e depois avançar
     //DONE : Banco de dados para a lista de feriados (pesquisar)
     //DONE : ver como atualiza o esquema do banco de dados
-    //TODO: Preencher feriados no banco
-    //TODO : ver como muda a cor do titulo do app
+    //DONE: Preencher feriados no banco
+
+    //TODO: Colocar mensagem de que não existe feriado naquele mês
+    //TODO: ver como muda a cor do titulo do app
     //TODO: de repente fazer o preenchimento da listview com um string-array em um xml, para nao criar inserções em banco direto no código
     //TODO: colocar propaganda
     //TODO: de repente criar um webservice que me devolve os feriados via json
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //radio buttons da main activity
         final RadioGroup rdg_estado = findViewById(R.id.rdg_estados);
         final RadioButton rdb_rj = findViewById(R.id.rdb_RJ);
-        final RadioButton rdba_sp = findViewById(R.id.rdb_SP);
+        final RadioButton rdb_sp = findViewById(R.id.rdb_SP);
         //botao avancar
         Button btn_avancar = findViewById(R.id.btn_avancar);
         btn_avancar.setOnClickListener(new View.OnClickListener() {
@@ -49,15 +51,18 @@ public class MainActivity extends AppCompatActivity {
                 else {
 
                     String estado = "";
-
                     if (rdb_rj.isChecked()) {
                         estado = "rj";
                     }
-                    if (rdba_sp.isChecked()) {
+                    if (rdb_sp.isChecked()) {
                         estado = "sp";
                     }
 
-                    Toast.makeText(getApplicationContext(), "Estado:" + estado, Toast.LENGTH_SHORT).show();
+
+                    if(estado.equals("rj"))
+                        Toast.makeText(getApplicationContext(), "Estado: " + rdb_rj.getText() , Toast.LENGTH_SHORT).show();
+                    if(estado.equals("sp"))
+                        Toast.makeText(getApplicationContext(), "Estado: " + rdb_sp.getText() , Toast.LENGTH_SHORT).show();
 
                     //transicao de tela para a activity mes
                     Intent intent = new Intent(MainActivity.this, MesActivity.class);

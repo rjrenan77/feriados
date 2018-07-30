@@ -10,18 +10,23 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="12dp"
         android:text="Os feriados deste mês são: "
         android:textColor="#000000"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="7dp"/>
+        android:textStyle="bold" />
 
     <ListView
 
         android:id="@+id/lista_feriados"
-        android:layout_width="wrap_content"
+
+        android:layout_width="336dp"
         android:layout_height="329dp"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp" />
 
     <!--<Button
@@ -40,8 +45,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="70dp"
-        android:text="Voltar ao Início"
-        android:background="@drawable/selector_button"/>
+        android:background="@drawable/selector_button"
+        android:text="Voltar ao Início" />
 
 
 </RelativeLayout>
