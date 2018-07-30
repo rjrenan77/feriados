@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //TODO : ver como muda a cor do titulo do app
     //TODO: de repente fazer o preenchimento da listview com um string-array em um xml, para nao criar inserções em banco direto no código
     //TODO: colocar propaganda
+    //TODO: de repente criar um webservice que me devolve os feriados via json
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
