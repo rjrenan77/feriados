@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ public class ListaFeriadosActivity extends AppCompatActivity {
 
     private BDSQLiteHelper bd;
     ArrayList<Feriado> listaFeriados;
+    FeriadoAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -70,11 +72,19 @@ public class ListaFeriadosActivity extends AppCompatActivity {
         Log.i("-------->>", "onStart: " + listaFeriados);
 
 
-        FeriadoAdapter adapter = new FeriadoAdapter(this, listaFeriados);
-        if (lista != null)
+        //verificando se a lista vem populada do banco de dados
+        //se vier vazia, eu desativo a visibilidade da lista
+        if (listaFeriados.isEmpty()) {
+            lista.setVisibility(View.GONE);
+        //se não vier vazia, eu desativo a visibilidade do text view que tras a mensagem de que não há feriados
+        //após isso eu exibo a lista
+        } else {
+
+            TextView teste = findViewById(R.id.msg_nao_ha_dados);
+            teste.setVisibility(View.GONE);
+            adapter = new FeriadoAdapter(this, listaFeriados);
             lista.setAdapter(adapter);
-
-
+        }
     }
 
     @Override

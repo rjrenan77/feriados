@@ -243,7 +243,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     }
 
 
-    //retornar feriados do banco pelo ID(//TODO : VER ISSO)
+    //retornar feriados do banco pelo ID
     public Feriado retornaFeriadoRJ(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABELA_RJ, //indica a tabela
@@ -256,7 +256,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
                 null);
 
 
-       if(cursor== null){
+       if(cursor == null){
            return null;
        }else {
            cursor.moveToFirst();

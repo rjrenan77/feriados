@@ -90,7 +90,7 @@ public class FeriadoAdapter extends BaseAdapter{
         TextView data = (TextView) rowView.findViewById(R.id.txt_view_data);
         TextView txt_feriado = (TextView) rowView.findViewById(R.id.txt_view_feriado);
 
-        //setando dados nas variaveis(TODO : montar data/mes/ano)
+        //setando dados nas variaveis
         data.setText(String.valueOf(feriado.getData()));
         txt_feriado.setText(feriado.getFeriado());
 
