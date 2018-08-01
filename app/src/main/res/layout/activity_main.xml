@@ -41,7 +41,9 @@
             android:text="São Paulo" />
     </RadioGroup>
 
-    <Button
+   <!-- Botao normal
+
+   <Button
         android:id="@+id/btn_avancar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,7 +56,7 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="279dp"
         tools:layout_editor_absoluteY="419dp"
-        android:background="@drawable/selector_button"/>
+        android:background="@drawable/selector_button"/>-->
 
 
 </RelativeLayout>

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
     //TODO: de repente criar um webservice que me devolve os feriados via json
     //TODO: API que já preenche os dados de estado, e município
 
+    RadioGroup rdg_estado;
+    RadioButton rdb_rj;
+    RadioButton rdb_sp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +40,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         //radio buttons da main activity
-        final RadioGroup rdg_estado = findViewById(R.id.rdg_estados);
-        final RadioButton rdb_rj = findViewById(R.id.rdb_RJ);
-        final RadioButton rdb_sp = findViewById(R.id.rdb_SP);
-        //botao avancar
-        Button btn_avancar = findViewById(R.id.btn_avancar);
-        btn_avancar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        rdg_estado = findViewById(R.id.rdg_estados);
+        rdb_rj = findViewById(R.id.rdb_RJ);
+        rdb_sp = findViewById(R.id.rdb_SP);
 
+
+    }
+
+    //método que sobrepoe a actionBar e adiciona um item de menu. estou usando para substituir o botão avançar antigo.
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_action_bar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //método que indica o comportamento ao se clicar no botao do item de menu.
+    // Coloquei "aways" no xml do menu_action_bar para aparecer o ícone
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.icone_avancar:
                 //verifica se algum radiobutton não está clicado
                 if (rdg_estado.getCheckedRadioButtonId() == -1) {
 
@@ -61,23 +79,20 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
-                    if(estado.equals("rj"))
-                        Toast.makeText(getApplicationContext(), "Estado: " + rdb_rj.getText() , Toast.LENGTH_SHORT).show();
-                    if(estado.equals("sp"))
-                        Toast.makeText(getApplicationContext(), "Estado: " + rdb_sp.getText() , Toast.LENGTH_SHORT).show();
+                    if (estado.equals("rj"))
+                        Toast.makeText(getApplicationContext(), "Estado: " + rdb_rj.getText(), Toast.LENGTH_SHORT).show();
+                    if (estado.equals("sp"))
+                        Toast.makeText(getApplicationContext(), "Estado: " + rdb_sp.getText(), Toast.LENGTH_SHORT).show();
 
                     //transicao de tela para a activity mes
                     Intent intent = new Intent(MainActivity.this, MesActivity.class);
                     //enviando valor da variável estado para a proxima activity
-                    intent.putExtra("estado",estado);
+                    intent.putExtra("estado", estado);
                     startActivity(intent);
 
                 }
-            }
-
-        });
-
-
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     //sobreescrevo o método que representa o botão voltar criando uma splash screen perguntando se

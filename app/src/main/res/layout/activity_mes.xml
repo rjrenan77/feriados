@@ -104,6 +104,9 @@
 
     </RadioGroup>
 
+   <!--
+    BOTAO AVANÇAR ANTIGO
+
     <Button
         android:id="@+id/btn_mes_avancar"
         android:layout_width="wrap_content"
@@ -114,7 +117,7 @@
         android:text="Avançar"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
-        android:background="@drawable/selector_button"/>
+        android:background="@drawable/selector_button"/> -->
 
     <!--<Button
         android:id="@+id/btn_mes_voltar"

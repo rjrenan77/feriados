@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -85,6 +87,26 @@ public class ListaFeriadosActivity extends AppCompatActivity {
 
             adapter = new FeriadoAdapter(this, listaFeriados);
             lista.setAdapter(adapter);
+
+            /***********DEFININDO UM CLIQUE CURTO EM UM ITEM DA LISTA***************/
+            lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Toast.makeText(ListaFeriadosActivity.this,"Posição: " + position, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            /***********DEFININDO UM CLIQUE LONGO NO ITEM DA LISTA**********************************************/
+            lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                    Toast.makeText(ListaFeriadosActivity.this,"Posição: " + position, Toast.LENGTH_SHORT).show();
+                    //true consome o evento sozinho
+                    return true;
+                }
+            });
+
+
         }
     }
 
