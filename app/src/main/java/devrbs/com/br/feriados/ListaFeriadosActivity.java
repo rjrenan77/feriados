@@ -76,12 +76,13 @@ public class ListaFeriadosActivity extends AppCompatActivity {
         //se vier vazia, eu desativo a visibilidade da lista
         if (listaFeriados.isEmpty()) {
             lista.setVisibility(View.GONE);
-        //se não vier vazia, eu desativo a visibilidade do text view que tras a mensagem de que não há feriados
+        //se não vier vazia, eu desativo a visibilidade do text view que traz a mensagem de que não há feriados
         //após isso eu exibo a lista
         } else {
 
-            TextView teste = findViewById(R.id.msg_nao_ha_dados);
-            teste.setVisibility(View.GONE);
+            TextView mensagemNaoHaDados = findViewById(R.id.msg_nao_ha_dados);
+            mensagemNaoHaDados.setVisibility(View.GONE);
+
             adapter = new FeriadoAdapter(this, listaFeriados);
             lista.setAdapter(adapter);
         }

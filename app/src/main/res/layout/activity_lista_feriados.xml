@@ -40,6 +40,12 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
+    <ImageView
+        android:layout_width="318dp"
+        android:layout_height="336dp"
+        android:layout_alignTop="@+id/lista_feriados"
+        android:layout_centerHorizontal="true" />
+
 
     <!--<Button
         android:id="@+id/btn_lista_feriados_voltar"
@@ -58,7 +64,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="70dp"
         android:background="@drawable/selector_button"
-        android:text="Voltar ao Início" />
+        android:text="Voltar ao Início"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
 
 
 </RelativeLayout>

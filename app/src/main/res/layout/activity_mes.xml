@@ -112,6 +112,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="70dp"
         android:text="Avançar"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/selector_button"/>
 
     <!--<Button
