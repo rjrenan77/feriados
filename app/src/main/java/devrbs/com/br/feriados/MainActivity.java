@@ -19,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
     //DONE : ver como atualiza o esquema do banco de dados
     //DONE: Preencher feriados no banco
     //DONE: Colocar mensagem de que não existe feriado naquele mês
+    //DONE: ver como muda a cor do titulo do app
 
-    //TODO: ver como muda a cor do titulo do app
     //TODO: de repente fazer o preenchimento da listview com um string-array em um xml, para nao criar inserções em banco direto no código
     //TODO: colocar propaganda
     //TODO: de repente criar um webservice que me devolve os feriados via json
+    //TODO: API que já preenche os dados de estado, e município
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
