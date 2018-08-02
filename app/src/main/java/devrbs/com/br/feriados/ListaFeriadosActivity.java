@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -36,17 +37,17 @@ public class ListaFeriadosActivity extends AppCompatActivity {
 
 
         //pegando referencia dos botoes
-        Button btnInicio = findViewById(R.id.btn_lista_feriados_inicio);
+       // Button btnInicio = findViewById(R.id.btn_lista_feriados_inicio);
 
 
         //tratando evento de click no botao
-        btnInicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
+//        btnInicio.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         //ativando botao voltar na actionBar
@@ -111,12 +112,25 @@ public class ListaFeriadosActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_lista, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
+            //botão voltar
             case android.R.id.home:
                 //só assim não esquece a referencia do estado!! kkk
                 finish();
+            //botão home
+            case R.id.voltar_inicio:
+                finish();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
         }
         return super.onOptionsItemSelected(item);
     }
