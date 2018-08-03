@@ -7,7 +7,7 @@
     tools:context=".ListaFeriadosActivity">
 
     <TextView
-
+        android:id="@+id/txt_feriados_sao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
@@ -27,24 +27,15 @@
         android:layout_marginTop="48dp"
         />
 
-    <TextView
-        android:id="@+id/msg_nao_ha_dados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="133dp"
-        android:text="QUE PENA NÃO HÁ FERIADOS NESTE MÊS :/"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textAlignment="center"/>
 
     <ImageView
-        android:layout_width="318dp"
-        android:layout_height="336dp"
-        android:layout_alignTop="@+id/lista_feriados"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/img_msg_nao_ha_dados"
+        android:layout_width="351dp"
+        android:layout_height="195dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/teste" />
 
 
     <!--<Button

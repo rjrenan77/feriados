@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -77,13 +78,17 @@ public class ListaFeriadosActivity extends AppCompatActivity {
 
         //verificando se a lista vem populada do banco de dados
         //se vier vazia, eu desativo a visibilidade da lista
+        //e deixo aparecer a mensagem de que nao há dados na lista
         if (listaFeriados.isEmpty()) {
+            TextView txt_feriados_sao = findViewById(R.id.txt_feriados_sao);
+            txt_feriados_sao.setVisibility(View.GONE);
             lista.setVisibility(View.GONE);
         //se não vier vazia, eu desativo a visibilidade do text view que traz a mensagem de que não há feriados
         //após isso eu exibo a lista
         } else {
 
-            TextView mensagemNaoHaDados = findViewById(R.id.msg_nao_ha_dados);
+            //desativando mensagem de nao há dadps
+            ImageView mensagemNaoHaDados = findViewById(R.id.img_msg_nao_ha_dados);
             mensagemNaoHaDados.setVisibility(View.GONE);
 
             adapter = new FeriadoAdapter(this, listaFeriados);
@@ -125,11 +130,13 @@ public class ListaFeriadosActivity extends AppCompatActivity {
             case android.R.id.home:
                 //só assim não esquece a referencia do estado!! kkk
                 finish();
+                break;
             //botão home
             case R.id.voltar_inicio:
                 finish();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                break;
 
         }
         return super.onOptionsItemSelected(item);
